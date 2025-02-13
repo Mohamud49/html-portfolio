@@ -1,49 +1,333 @@
-<!-- TODO 1: Create the HTML Boilerplate -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TODO 4: Add titles/subtitles etc. -->
-    <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Navbar</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      // Initialize EmailJS with your User ID
+      (function() {
+        emailjs.init("nreZKtnLNZNJtiJO7"); // Replace with your EmailJS User ID
+      })();
+    </script>
 </head>
 <body>
-    <!-- TODO 2: Add Your previous projects' HTML into the public folder 
-     <a href="./public/about.html">About me</a>-->
-     <h1>Mohamud Mohamed's Portfolio</h1>
-     <h2>I am a web developer</h2>
-     <hr/>
-     <a href="./public/movie-ranking.html"><h2>Movie Ranking Projects</h2></a>
-     <img src="./assets/images/movie-ranking.png" height="200">
-     <h3>The best Movie according to Mohamud</h3>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Portfolio Logo">
+        <span>Portfolio Name</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="dark-mode-toggle">
+        <span class="mode-icon">🌙</span>
+      </div>
+    </nav>
+  </header>
 
-     <a href="./public/birthday-invite.html"><h2>Birthday Invite projects</h2></a>
-     <h3>Its my Birthday</h3>
-     <h4>On the 7th April</h4>
-     <img src="https://raw.githubusercontent.com/appbrewery/webdev/main/birthday-cake3.4.jpeg" height="200" alt="my birtdhday">
-     <h3>What to bring</h3>
-     <ul>
-        <li>Baloons (I love Baloons)</li>
-        <li>Cake (I am really good at eating)</li>
-        <li>An appetite (there will be lots of food)</li>
-     </ul>
-     <hr/>
-     <a href="./public/about.html">About Me</a>
-     <a href="./public/contact.html">Contact Me</a>
-     <a href="./Resume/index.html">My Resume</a>
-    <a href="./resume.html">My Resume</a>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+          <h1>Welcome to My Portfolio</h1>
+          <p id="changing-text">I am a <span class="text-change">Web Developer</span></p>
+          <a href="#about" class="cta-button">Learn More</a>
+        </div>
+      </section>
+
+       <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-content">
+      <div class="about-text">
+        <h1>About Me</h1>
+        <p>
+          Hi, I'm John Doe, a passionate web developer with over 5 years of experience in building modern and responsive websites.
+          <span id="more-text" class="hidden">
+            I specialize in front-end development using HTML, CSS, JavaScript, and frameworks like React. I also have experience in back-end development with Node.js and databases like MongoDB. My goal is to create user-friendly and visually appealing web applications that solve real-world problems.
+            <p>
+                Hi, I'm John Doe, a passionate web developer with over 5 years of experience in building modern and responsive websites.
+            </p>
+        </span>
+        </p>
+        <span id="read-more" class="read-more">Read More</span>
+        <span id="read-less" class="read-less hidden">Read Less</span>
+        <a href="./exam_eptc_November_1[1].pdf" class="cta-button" target="_blank">Download My CV</a>
+      </div>
+      <div class="about-image">
+        <img src="./Img/Addis.jpg" alt="Profile Image">
+      </div>
+    </div>
+  </section>
+
+   <!-- Skills Section -->
+   <section class="skills" id="skills">
+    <div class="skills-content">
+      <h1>My Skills</h1>
+      <p class="skills-description">Here are some of the key skills I've developed over the years. I continuously strive to improve and learn new technologies.</p>
+      <div class="skill">
+        <div class="skill-info">
+          <i class="fas fa-code"></i>
+          <span>Web Development</span>
+          <span>95%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 95%;"></div>
+        </div>
+        <p class="skill-description">I specialize in building responsive and user-friendly websites using modern technologies like HTML, CSS, JavaScript, and frameworks like React.</p>
+      </div>
+      <div class="skill">
+        <div class="skill-info">
+          <i class="fas fa-pencil-ruler"></i>
+          <span>UI/UX Design</span>
+          <span>90%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 90%;"></div>
+        </div>
+        <p class="skill-description">I create intuitive and visually appealing user interfaces, focusing on user experience and usability.</p>
+      </div>
+      <div class="skill">
+        <div class="skill-info">
+          <i class="fas fa-video"></i>
+          <span>Video Editing</span>
+          <span>85%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 85%;"></div>
+        </div>
+        <p class="skill-description">I edit and produce high-quality videos using tools like Adobe Premiere Pro and Final Cut Pro.</p>
+      </div>
+      <div class="skill">
+        <div class="skill-info">
+          <i class="fas fa-palette"></i>
+          <span>Graphic Design</span>
+          <span>80%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 80%;"></div>
+        </div>
+        <p class="skill-description">I design logos, posters, and other visual content using tools like Adobe Photoshop and Illustrator.</p>
+      </div>
+      <div class="skill">
+        <div class="skill-info">
+          <i class="fas fa-mobile-alt"></i>
+          <span>Mobile App Development</span>
+          <span>75%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 75%;"></div>
+        </div>
+        <p class="skill-description">I develop cross-platform mobile applications using frameworks like React Native and Flutter.</p>
+      </div>
+      <div class="skill">
+        <div class="skill-info">
+          <i class="fas fa-chart-line"></i>
+          <span>Digital Marketing</span>
+          <span>70%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 70%;"></div>
+        </div>
+        <p class="skill-description">I plan and execute digital marketing strategies, including SEO, social media, and email campaigns.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="services-content">
+      <h1>My Services</h1>
+      <p class="services-description">I offer a range of services to help you achieve your goals. Here are some of the key services I provide.</p>
+      <div class="service-cards">
+        <div class="service-card">
+          <i class="fas fa-code"></i>
+          <h2>Web Development</h2>
+          <p>I build responsive and user-friendly websites using modern technologies like HTML, CSS, JavaScript, and frameworks like React.</p>
+          <a href="#" class="service-button">Learn More</a>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-pencil-ruler"></i>
+          <h2>UI/UX Design</h2>
+          <p>I create intuitive and visually appealing user interfaces, focusing on user experience and usability.</p>
+          <a href="#" class="service-button">Learn More</a>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-video"></i>
+          <h2>Video Editing</h2>
+          <p>I edit and produce high-quality videos using tools like Adobe Premiere Pro and Final Cut Pro.</p>
+          <a href="#" class="service-button">Learn More</a>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-palette"></i>
+          <h2>Graphic Design</h2>
+          <p>I design logos, posters, and other visual content using tools like Adobe Photoshop and Illustrator.</p>
+          <a href="#" class="service-button">Learn More</a>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h2>Mobile App Development</h2>
+          <p>I develop cross-platform mobile applications using frameworks like React Native and Flutter.</p>
+          <a href="#" class="service-button">Learn More</a>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-chart-line"></i>
+          <h2>Digital Marketing</h2>
+          <p>I plan and execute digital marketing strategies, including SEO, social media, and email campaigns.</p>
+          <a href="#" class="service-button">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="contact-content">
+      <h1>Contact Me</h1>
+      <p class="contact-description">Have a question or want to work together? Feel free to reach out!</p>
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Message</button>
+      </form>
+      <p id="form-status" class="form-status"></p>
+    </div>
+  </section>
+
+  <script>
+    // Handle form submission
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Send email using EmailJS
+      emailjs.sendForm("service_al18nxa", "template_cagrugq", this)
+        .then(function(response) {
+          console.log("Email sent successfully!", response);
+          document.getElementById("form-status").textContent = "Message sent successfully!";
+          document.getElementById("form-status").style.color = "green";
+          document.getElementById("contact-form").reset(); // Clear the form
+        }, function(error) {
+          console.error("Failed to send email:", error);
+          document.getElementById("form-status").textContent = "Failed to send message. Please try again.";
+          document.getElementById("form-status").style.color = "red";
+        });
+    });
+  </script>
+
+   <!-- Footer Section -->
+   <footer class="footer">
+    <div class="footer-content">
+      <!-- Social Media Links -->
+      <div class="footer-section social">
+        <h3>Follow Me</h3>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="footer-section contact-info">
+        <h3>Contact Info</h3>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country</li>
+          <li><i class="fas fa-phone"></i> +123 456 7890</li>
+          <li><i class="fas fa-envelope"></i> info@example.com</li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Subscription -->
+      <div class="footer-section newsletter">
+        <h3>Subscribe to My Newsletter</h3>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" id="newsletter-email" name="email" placeholder="Your Email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="subscription-status" class="subscription-status"></p>
+      </div>
+    </div>
+
+    <!-- Copyright Notice -->
+    <div class="footer-bottom">
+      <p>&copy; 2023 Your Name. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Handle newsletter form submission
+    document.getElementById("newsletter-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      const userEmail = document.getElementById("newsletter-email").value;
+
+      // Send data to Google Sheets
+      fetch("https://script.google.com/macros/s/AKfycbzuqdckyS6HY1w8oNuzgeLR9gb9MS2Qapihqc_HnpUgtugEDZycwpUyKvJhbZAT41EMTg/exec", {
+        method: "POST",
+        body: JSON.stringify({ email: userEmail }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.status === "success") {
+            document.getElementById("subscription-status").textContent = "Thank you for subscribing!";
+            document.getElementById("subscription-status").style.color = "green";
+            document.getElementById("newsletter-form").reset(); // Clear the form
+          } else {
+            throw new Error("Failed to add data");
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          document.getElementById("subscription-status").textContent = "Failed to subscribe. Please try again.";
+          document.getElementById("subscription-status").style.color = "red";
+        });
+    });
+  </script>
+
+  <!-- Overlay for mobile menu -->
+  <div class="overlay" id="overlay"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-<!-- TODO 3: Take screenshots of your project previews and add the images to the images folder -->
-
-
-
-<!-- TODO 5: Add a link to the project pages -->
-
-<!-- TODO 6: Add images to show the project previews
-HINT for TODO 6: You can use the height attribute set to 200 to make the image smaller:
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
-
-<!-- TODO 7: Add the Contact Me and About Me page links -->
